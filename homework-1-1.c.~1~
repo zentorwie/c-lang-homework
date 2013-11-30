@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main()
+{
+    int T, a, b, c, s, min, max;
+    
+    scanf("%d", &T);
+    while (T--) {
+	scanf("%d%d%d", &a, &b, &c);
+	s = a+b+c;
+	min = max = a;
+	if (b > max)
+	    max = b;
+	if (b < min)
+	    min = b;
+	if (c > max)
+	    max = c;
+	if (c < min)
+	    min = c;
+	if (a == b || b == c || a == c)
+	    printf("%d\n", max);
+	else
+	    printf("%d\n", s - min - max);
+
+	    
+	    
+     
+     
+	
+    }
+   
+    return 0;
+}
